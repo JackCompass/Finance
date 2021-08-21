@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Finance/static/css/main.ea1455b2.chunk.css",
+    "main.js": "/Finance/static/js/main.81b580bc.chunk.js",
+    "main.js.map": "/Finance/static/js/main.81b580bc.chunk.js.map",
+    "runtime-main.js": "/Finance/static/js/runtime-main.85ecaf40.js",
+    "runtime-main.js.map": "/Finance/static/js/runtime-main.85ecaf40.js.map",
+    "static/js/2.3c8ba5d1.chunk.js": "/Finance/static/js/2.3c8ba5d1.chunk.js",
+    "static/js/2.3c8ba5d1.chunk.js.map": "/Finance/static/js/2.3c8ba5d1.chunk.js.map",
+    "static/js/3.28e0c0ce.chunk.js": "/Finance/static/js/3.28e0c0ce.chunk.js",
+    "static/js/3.28e0c0ce.chunk.js.map": "/Finance/static/js/3.28e0c0ce.chunk.js.map",
+    "index.html": "/Finance/index.html",
+    "static/css/main.ea1455b2.chunk.css.map": "/Finance/static/css/main.ea1455b2.chunk.css.map",
+    "static/js/2.3c8ba5d1.chunk.js.LICENSE.txt": "/Finance/static/js/2.3c8ba5d1.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.85ecaf40.js",
+    "static/js/2.3c8ba5d1.chunk.js",
+    "static/css/main.ea1455b2.chunk.css",
+    "static/js/main.81b580bc.chunk.js"
+  ]
+}
