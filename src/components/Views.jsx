@@ -8,8 +8,6 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 
-import { db } from './../firebase';
-
 const StyledTableCell = withStyles((theme) => ({
 	head: {
 		backgroundColor: theme.palette.common.black,
@@ -38,26 +36,25 @@ const useStyles = makeStyles({
 	}
 });
 
-const Views = () => {
+const Views = ({data,}) => {
 	const classes = useStyles();
+	// const [data, setData] = useState([]);
 
-	const [data, setData] = useState([]);
+	// useEffect(() => {
+	// 	db.ref('users/').get().then( (snapshot) => {
+	// 		snapshot.forEach( element => {
+	// 			setData( (prevState) => {
+	// 				return [...prevState, element.val()];
+	// 			})
+	// 		});
+	// 	}).catch ( (error) => {
+	// 		alert(error.message);
+	// 	})
 
-	useEffect(() => {
-		db.ref('users/').get().then( (snapshot) => {
-			snapshot.forEach( element => {
-				setData( (prevState) => {
-					return [...prevState, element.val()];
-				})
-			});
-		}).catch ( (error) => {
-			alert(error.message);
-		})
+	// 	return () => {
 
-		return () => {
-
-		}
-	}, [])
+	// 	}
+	// }, [])
 
 	return (
 		<div className={classes.tableView}>
