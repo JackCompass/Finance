@@ -32,7 +32,7 @@ function Home() {
 				<Typography variant="h3">Welcome to Finance Bank</Typography>
 			</div>
 			<div className={classes.imageContainer}>
-				<img className={classes.image} src="./bank.jpg" alt="bank-image" />
+				<img className={classes.image} src="./Finance/bank.jpg" alt="bank-image" />
 			</div>
 		</>
 	)
