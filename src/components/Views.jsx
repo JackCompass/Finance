@@ -7,6 +7,7 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import {db} from './../firebase';
 
 const StyledTableCell = withStyles((theme) => ({
 	head: {
@@ -36,25 +37,21 @@ const useStyles = makeStyles({
 	}
 });
 
-const Views = ({data,}) => {
+const Views = () => {
 	const classes = useStyles();
-	// const [data, setData] = useState([]);
+	const [data, setData] = useState([]);
 
-	// useEffect(() => {
-	// 	db.ref('users/').get().then( (snapshot) => {
-	// 		snapshot.forEach( element => {
-	// 			setData( (prevState) => {
-	// 				return [...prevState, element.val()];
-	// 			})
-	// 		});
-	// 	}).catch ( (error) => {
-	// 		alert(error.message);
-	// 	})
-
-	// 	return () => {
-
-	// 	}
-	// }, [])
+	useEffect(() => {
+		db.ref('users/').get().then( (snapshot) => {
+			snapshot.forEach( element => {
+				setData( (prevState) => {
+					return [...prevState, element.val()];
+				})
+			});
+		}).catch ( (error) => {
+			alert(error.message);
+		})
+	}, [])
 
 	return (
 		<div className={classes.tableView}>
@@ -71,14 +68,14 @@ const Views = ({data,}) => {
 					</TableHead>
 					<TableBody>
 						{data.map((item) => {
-							return (<StyledTableRow key={item['Account Holder']}>
+							return (<StyledTableRow key={item.AccountHolder}>
 								<StyledTableCell component="th" scope="row">
-									{item['Account Holder']}
+									{item.AccountHolder}
 								</StyledTableCell>
-								<StyledTableCell align="right">{item['Account Type']}</StyledTableCell>
-								<StyledTableCell align="right">{item['User Id']}</StyledTableCell>
-								<StyledTableCell align="right">{item['Email']}</StyledTableCell>
-								<StyledTableCell align="right">{item['Current Balance']}</StyledTableCell>
+								<StyledTableCell align="right">{item.AccountType}</StyledTableCell>
+								<StyledTableCell align="right">{item.UserId}</StyledTableCell>
+								<StyledTableCell align="right">{item.Email}</StyledTableCell>
+								<StyledTableCell align="right">{item.CurrentBalance}</StyledTableCell>
 							</StyledTableRow>)
 						})}
 					</TableBody>
